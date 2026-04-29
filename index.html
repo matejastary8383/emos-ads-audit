@@ -1214,8 +1214,30 @@ h1, h2, h3 {
   font-size: 14px;
   color: var(--dex-text);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  line-height: 1.5;
+}
+
+.card-features li::before {
+  margin-top: 2px;
+}
+
+.savings-note {
+  background: var(--dex-blue-10);
+  border: 1px dashed var(--dex-blue);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 4px 0 18px;
+  font-size: 13px;
+  color: var(--dex-navy);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.savings-note strong {
+  color: var(--dex-blue);
+  font-weight: 700;
 }
 
 .card-features li::before {
@@ -2499,8 +2521,12 @@ h1, h2, h3 {
               <li>Interný audit a príprava stratégie na kampane pre 4 krajiny</li>
               <li>Odhad dopadu na obrat po implementácii krokov</li>
               <li>2 hodinová konzultácia spojená s prezentáciou auditu</li>
-              <li><strong>1. mesiac správy Google Ads pre 4 krajiny ZADARMO</strong> &middot; štandardne 4 &times; 690&euro; = 2 760&euro;</li>
+              <li>1. mesiac správy Google Ads pre 4 krajiny ZADARMO</li>
             </ul>
+            <div class="savings-note">
+              <strong>Hodnota 1. mesiaca zadarmo</strong><br>
+              4 krajiny &times; 690&euro; = <strong>2 760&euro;</strong>
+            </div>
             <button class="btn btn-primary" onclick="flipCard('card2inner')">Objednať setup</button>
           </div>
           <div class="flip-card-back">
