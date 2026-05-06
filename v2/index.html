@@ -442,12 +442,21 @@ h1, h2, h3 {
   margin: 0 auto;
   font-size: 14px;
   line-height: 1.7;
-  color: rgba(255,255,255,0.85);
+  color: var(--dex-navy);
   position: relative;
   z-index: 1;
 }
 
 .highlight-detail strong {
+  color: var(--dex-blue);
+}
+
+/* On dark navy hero section keep the white-text variant */
+.highlight-section .highlight-detail {
+  color: rgba(255,255,255,0.92);
+}
+
+.highlight-section .highlight-detail strong {
   color: var(--dex-white);
 }
 
