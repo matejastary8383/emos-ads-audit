@@ -1128,6 +1128,21 @@ h1, h2, h3 {
   height: 660px;
 }
 
+.pricing-card {
+  background: var(--dex-white);
+  color: var(--dex-text);
+  padding: 40px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--dex-blue);
+}
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -1596,6 +1611,7 @@ h1, h2, h3 {
 
   .flip-card { height: 720px; }
   .flip-card-front { padding: 32px 28px; }
+  .pricing-card { padding: 32px 28px; }
   .pricing-section { padding: 64px 20px; }
 }
 
@@ -2603,112 +2619,43 @@ h1, h2, h3 {
     </div>
 
     <div class="pricing-cards">
-      <div class="flip-card" id="card1">
-        <div class="flip-card-inner" id="card1inner">
-          <div class="flip-card-front">
-            <div class="card-title">Full Audit + konzultácia</div>
-            <div class="card-discount-row">
-              <span class="card-old-price-strong">1 890&euro;</span>
-              <span class="card-discount-badge">&minus;32 %</span>
-            </div>
-            <div class="card-price">1 290&euro;</div>
-            <div class="card-price-note">bez DPH &middot; jednorazovo</div>
-            <div class="card-save-line">Ušetríte 600&euro;</div>
-            <div class="card-validity">Cena platí do <strong>5. júna 2026</strong>. Po tomto dátume sa vracia na 1&nbsp;890&nbsp;&euro;.</div>
-            <ul class="card-features">
-              <li>Interný audit a príprava stratégie na kampane pre 4 krajiny</li>
-              <li>Odhad dopadu na obrat po implementácii krokov</li>
-              <li>2 hodinová konzultácia spojená s prezentáciou auditu</li>
-            </ul>
-            <button class="btn btn-secondary" onclick="flipCard('card1inner')">Objednať audit</button>
-          </div>
-          <div class="flip-card-back">
-            <div class="card-title">Platobné údaje</div>
-            <div class="iban-box">
-              <div class="iban-label">IBAN</div>
-              <div class="iban-value">
-                <span id="iban1">SK18 0900 0000 0050 5804 0235</span>
-                <button class="copy-btn" onclick="copyIban('iban1')">Kopírovať</button>
-              </div>
-            </div>
-            <div class="iban-box" style="margin-bottom:8px;">
-              <div class="iban-label">Príjímateľ</div>
-              <div class="iban-value">Dexfinity s.r.o.</div>
-            </div>
-            <div class="iban-box" style="margin-bottom:16px;">
-              <div class="iban-label">Banka</div>
-              <div class="iban-value">Slovenská sporiteľňa</div>
-            </div>
-            <div class="process-box">
-              <strong>Po platbe.</strong>
-              1. Potvrdenie emailom do 24h<br>
-              2. Kick-off call na nastavenie prístupov<br>
-              3. Dodanie auditu do 10 prac. dní
-            </div>
-            <div class="contact-info">
-              erik.korim@dexfinity.com<br>
-              +420 736 222 811
-            </div>
-            <button class="back-btn" onclick="flipCard('card1inner')">Späť na prehľad</button>
-          </div>
+      <div class="pricing-card">
+        <div class="card-title">Full Audit + konzultácia</div>
+        <div class="card-discount-row">
+          <span class="card-old-price-strong">1 890&euro;</span>
+          <span class="card-discount-badge">&minus;32 %</span>
         </div>
+        <div class="card-price">1 290&euro;</div>
+        <div class="card-price-note">bez DPH &middot; jednorazovo</div>
+        <div class="card-save-line">Ušetríte 600&euro;</div>
+        <div class="card-validity">Cena platí do <strong>5. júna 2026</strong>. Po tomto dátume sa vracia na 1&nbsp;890&nbsp;&euro;.</div>
+        <ul class="card-features">
+          <li>Interný audit a príprava stratégie na kampane pre 4 krajiny</li>
+          <li>Odhad dopadu na obrat po implementácii krokov</li>
+          <li>2 hodinová konzultácia spojená s prezentáciou auditu</li>
+        </ul>
       </div>
 
-      <div class="flip-card" id="card2">
-        <div class="flip-card-inner" id="card2inner">
-          <div class="flip-card-front featured">
-            <div class="featured-badge">Odporúčame &middot; 1. mesiac zadarmo</div>
-            <div class="card-title">Full Audit + Setup účtu + 1. mesiac správy zadarmo</div>
-            <div class="card-discount-row">
-              <span class="card-old-price-strong">2 490&euro;</span>
-              <span class="card-discount-badge">&minus;32 %</span>
-            </div>
-            <div class="card-price">1 690&euro;</div>
-            <div class="card-price-note">bez DPH &middot; jednorazovo</div>
-            <div class="card-save-line">Ušetríte 800&euro; + 1. mesiac správy v hodnote 2 760&euro;</div>
-            <div class="card-validity">Cena platí do <strong>5. júna 2026</strong>. Po tomto dátume sa vracia na 2&nbsp;490&nbsp;&euro;.</div>
-            <ul class="card-features">
-              <li>Interný audit a príprava stratégie na kampane pre 4 krajiny</li>
-              <li>Odhad dopadu na obrat po implementácii krokov</li>
-              <li>2 hodinová konzultácia spojená s prezentáciou auditu</li>
-              <li>1. mesiac správy Google Ads pre 4 krajiny ZADARMO</li>
-            </ul>
-            <div class="savings-note">
-              <strong>Celková hodnota balíčka</strong><br>
-              800&euro; zľava + 1. mesiac správy 4&nbsp;&times;&nbsp;690&euro; = <strong>3 560&euro; benefit</strong>
-            </div>
-            <button class="btn btn-primary" onclick="flipCard('card2inner')">Objednať setup</button>
-          </div>
-          <div class="flip-card-back">
-            <div class="card-title">Platobné údaje</div>
-            <div class="iban-box">
-              <div class="iban-label">IBAN</div>
-              <div class="iban-value">
-                <span id="iban2">SK18 0900 0000 0050 5804 0235</span>
-                <button class="copy-btn" onclick="copyIban('iban2')">Kopírovať</button>
-              </div>
-            </div>
-            <div class="iban-box" style="margin-bottom:8px;">
-              <div class="iban-label">Príjímateľ</div>
-              <div class="iban-value">Dexfinity s.r.o.</div>
-            </div>
-            <div class="iban-box" style="margin-bottom:16px;">
-              <div class="iban-label">Banka</div>
-              <div class="iban-value">Slovenská sporiteľňa</div>
-            </div>
-            <div class="process-box">
-              <strong>Po platbe.</strong>
-              1. Potvrdenie emailom do 24h<br>
-              2. Kick-off call na nastavenie prístupov<br>
-              3. Dodanie auditu do 10 prac. dní<br>
-              4. Štart mesačnej správy
-            </div>
-            <div class="contact-info">
-              erik.korim@dexfinity.com<br>
-              +420 736 222 811
-            </div>
-            <button class="back-btn" onclick="flipCard('card2inner')">Späť na prehľad</button>
-          </div>
+      <div class="pricing-card featured">
+        <div class="featured-badge">Odporúčame &middot; 1. mesiac zadarmo</div>
+        <div class="card-title">Full Audit + Setup účtu + 1. mesiac správy zadarmo</div>
+        <div class="card-discount-row">
+          <span class="card-old-price-strong">2 490&euro;</span>
+          <span class="card-discount-badge">&minus;32 %</span>
+        </div>
+        <div class="card-price">1 690&euro;</div>
+        <div class="card-price-note">bez DPH &middot; jednorazovo</div>
+        <div class="card-save-line">Ušetríte 800&euro; + 1. mesiac správy v hodnote 2 760&euro;</div>
+        <div class="card-validity">Cena platí do <strong>5. júna 2026</strong>. Po tomto dátume sa vracia na 2&nbsp;490&nbsp;&euro;.</div>
+        <ul class="card-features">
+          <li>Interný audit a príprava stratégie na kampane pre 4 krajiny</li>
+          <li>Odhad dopadu na obrat po implementácii krokov</li>
+          <li>2 hodinová konzultácia spojená s prezentáciou auditu</li>
+          <li>1. mesiac správy Google Ads pre 4 krajiny ZADARMO</li>
+        </ul>
+        <div class="savings-note">
+          <strong>Celková hodnota balíčka</strong><br>
+          800&euro; zľava + 1. mesiac správy 4&nbsp;&times;&nbsp;690&euro; = <strong>3 560&euro; benefit</strong>
         </div>
       </div>
     </div>
@@ -2758,22 +2705,6 @@ document.querySelectorAll('.mobile-overlay a').forEach(function(link) {
 document.querySelectorAll('.nav-links a').forEach(function(link) {
   link.addEventListener('click', closeMenu);
 });
-
-// Flip card
-function flipCard(id) {
-  document.getElementById(id).classList.toggle('flipped');
-}
-
-// Copy IBAN to clipboard
-function copyIban(id) {
-  var text = document.getElementById(id).textContent.trim();
-  navigator.clipboard.writeText(text).then(function() {
-    var btn = document.getElementById(id).nextElementSibling;
-    var original = btn.textContent;
-    btn.textContent = 'Skopírované!';
-    setTimeout(function() { btn.textContent = original; }, 2000);
-  });
-}
 
 // Locked section CTA scrolls to #pricing
 document.querySelectorAll('.unlock-badge[data-scroll]').forEach(function(badge) {
